@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	<link href="C:\Users\shabarish.kesa\Desktop\work\Tool\style.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+</head>
+<body ng-app="FIApp">
+	<div ng-controller="FIAppController">
+	<div class="topnav" ng-init="load()">
+		<a class="active" href="C:\Users\shabarish.kesa\Desktop\work\Tool\index1.html">Home</a>
+		<a href="/Users/shabarish.kesa/Desktop/work/Tool/quicklinks.html" target="_blank">Quick Links</a>
+		<a href="/Users/shabarish.kesa/Desktop/work/Tool/FIcontent.html" target="_blank">FI Documents</a>
+		<a href="/Users/shabarish.kesa/Desktop/work/Tool/C24content.html" target="_blank">C24 Documents</a>
+		<a href="/Users/shabarish.kesa/Desktop/work/Tool/aboutus.html" target="_blank">About Us</a>
+	</div>
+	
+	<div class="headLogo">
+		<img class="headLogoimg1" src="C:\Users\shabarish.kesa\Desktop\work\Tool\logo.png" align="center">
+		<img class="headLogoimg2" src="C:\Users\shabarish.kesa\Desktop\work\Tool\logo2.png" align="center">
+	</div>
+	
+	<div class="headTitle">
+	<h1 align="center" class="effect" ng-click="reset()"><a href="#" style="color: black">FI and Connect24 Error Analysis Tool</a></h1>
+	</div>
+	
+	<div class="sidepanel">
+	<p style="text-align: center; font-size: 12px;"><br>
+	<label class="dispLabel"><B>Your Navigation Route</B></p></label><br>
+	<p align="center" ng-repeat="item in hist">
+	<u style="cursor : pointer;" value="item" ng-click="selectOption(item) ; jumpto(item)">{{ item }}</u><br>
+	</p>
+	</div>
+	
+	<div class="HelpBox" id="HelpBox">
+	<p ng-hide="hideProceed">FI - Finacle Integrator is the gateway to expose Finacle suite services, and to consume enterprise services<br>Connect24 - Real-time 24x7 interface for Delivery Channels,Supports the ISO 8583 message standard.It mainly consists of <ul ng-hide="hideProceed"><li>Central bancs connect(CBC)</li><li>Uniserver(UNISER)</li><li>Stand-in server(CSIS)</li></ul></p>
+	<div class = "content">{{ content }}</div>
+	</div>	
+	
+	<div class="QuestBox" id="QuestBox">
+		<label style="display:inline-block;float: right;"> <B>Font size</B> &nbsp;
+			<label class="fontsize" ng-click="changefontsize('1')"> <B>a+ </B><span class="tooltip">Increase font size</span></label>&nbsp;
+			<label class="fontsize" ng-click="changefontsize('0')"> <B>a </B>  <span class="tooltip">Reset font size</span></label>&nbsp;
+			<label class="fontsize" ng-click="changefontsize('-1')"> <B>a- </B><span class="tooltip">Decrease font size</span></label>
+		</label><br>
+	<div class="currquestion" value="Question" >{{ Question }}</div><br/> <br/>
+	
+	<p ng-repeat="item in modules">
+	<input value="item" class="pointItem" type="radio" name="UsrInpt" ng-click="selectOption(item)"/>
+	{{ item }}
+	
+	<div ng-click="clicked()" >To Know more about {{ obj }} <a href="#" target="_blank">Click here</a></div>
+	</p>
+	<input class="btnInput" type="button" value="Proceed" ng-disabled="disableProceed" ng-click="processOption() ; load()"/>
+	<input class="btnInput" type="button" value="Reset" ng-click="reset()"/>
+
+	</div>
+	
+	<footer class="footer">
+	
+	<div class="feedback">
+	<a href="mailto:shabarish.kesa@infosys.com?Subject=FIC24Tool%20feedback">
+	<img class="feedback" src="C:\Users\shabarish.kesa\Desktop\work\Tool\feedback.png" align="right">
+	</a>
+	</div>
+	
+	</footer>
+	
+	</div>
+	
+	<script src="C:\Users\shabarish.kesa\Desktop\work\Tool\FIApp.js"></script>
+
+</body>

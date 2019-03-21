@@ -1,0 +1,224 @@
+body {
+    font-family: 'Open Sans', serif;
+    font-size: 12px;
+}
+body {
+    display: block;
+    margin: 0;
+}
+div {
+    display: block;
+}
+
+.headLogo{
+	width: auto;
+	height: auto;
+	padding: auto;
+}
+
+.headLogo img{
+	position:absolute;
+	left:190px;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+.headLogo img.headLogoimg2:hover{
+	opacity:0;
+}
+
+.headLogo {
+    padding: auto;
+	left: 50%;
+    margin-left: -500px;
+    background:url(C:\Users\shabarish.kesa\Desktop\work\Tool\logo.png) no-repeat;
+    width:1000px;
+    height:200px;
+	position: relative;
+}
+
+.dispLabel{
+	background-color	: grey;
+	text-shadow			: 0px 4px 4px white;
+	padding						: 10px 10px 10px 10px ;
+	border-radius			: 5px;
+	color							: white;
+}
+
+.container{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr;
+}
+
+.zone{
+	padding: 10px 10px 10px 10px;
+	margin-top: 10px;
+	margin-bottom:10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align:center;
+	cursor:pointer;
+	font-size:auto;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+	transition: all 0.3s linear;
+	background-color: grey;
+}
+
+span{
+	color:white;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.QuestBox {
+	padding						: 5px;
+	border						: 5px ; 
+	background-color	: white;
+	text-align					: left;
+	/*font-size					: 12px;*/
+	float							: left;
+	width							: 60%;
+	/*min-height				: 400px;*/
+	overflow					: auto;
+	margin-left						: 7.5px;
+}
+
+.pointItem{
+	cursor 						: pointer;
+}
+
+.btnInput {
+	text-align					: left;
+	/*font-size					: 11px;*/
+	margin						: 1px 2px 1px 2px;
+	clear							: left ;
+	cursor 						: pointer;
+	padding						: 9px 14px;
+	background-color	: #009999;
+	color							: white;
+	border						: none;
+	border-radius			: 4px;
+	float							: right;	
+}
+input[class="btnInput"]:disabled {
+    cursor		: not-allowed;
+}
+
+.fontsize {
+	background-color	: #009999; 
+	color 							: white; 
+	border-radius 			: 2px;
+	padding						: 1px 1px 1px 2px;
+	border						: 1px;
+	width							: 4px;
+	position: auto;
+}
+.fontsize .tooltip {
+    visibility: hidden;
+    width: 120px;
+	border	: 1px solid #009999;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 1px;
+    border-radius: 2px;
+	margin : 20px 0px 0px 0px;
+    position: absolute;
+    z-index: 1;
+}
+.fontsize:hover {
+	background-color : grey;
+}
+.fontsize:hover .tooltip {
+    visibility: visible;
+}
+
+.sidepanel {
+	padding						: 5px;
+	/*border-left				:  2px solid Aquamarine; 
+	border-right				:  2px solid Aquamarine; 
+	border-bottom		:  2px solid Aquamarine; 
+	background-color	: white;*/
+	width							: 40%;
+	max-width				: 180px;
+	height						: 100%;
+	min-height				: 600px;
+	/*max-height				: 600px;*/
+	text-align					: left;
+	text-shadow			: 4px 4px 4px #aaa;
+	/*font-size					: 11px;*/
+	/*overflow					: auto;*/
+	margin						: auto;
+	float							: left;
+}
+
+.feedback{
+	height:20%;
+	width:20%;
+}
+
+img {
+    margin-left:150px;
+    vertical-align: top;
+	display: block;
+	height:auto;
+	width:auto;
+	
+}
+.HelpBox {
+	padding						: 15px 5px 15px 5px;
+	border-top				: 2px solid grey; 
+	border-left				: 2px solid grey; 
+	border-right				: 2px solid grey; 
+	border-bottom		: 2px solid grey; 
+	border-radius			: 9px;	
+	min-width					: 400px;
+	width							: 60%;
+	min-height				: 200px;
+	background-color	: AliceBlue;
+	text-align					: center;
+	/*font-size					: 11px;*/
+	float							: left;
+	margin-left						: 7.5px;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
